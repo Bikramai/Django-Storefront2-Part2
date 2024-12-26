@@ -17,8 +17,8 @@ def product_list(request):
     elif request.method == 'POST':
         serializer = ProductSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
+        serializer.validated_data     
         serializer.save()
-        print(serializer.validated_data)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
         
 @api_view(['GET', 'PUT', 'DELETE'])
@@ -32,6 +32,11 @@ def product_detail(request, id):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data) 
+    elif request.method == 'DELETE':
+        if product.orderitems.count() > 0:
+            return Response({'error': 'Product cannot be deleted because it is associated with an order item.'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+        product.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
     
 
 @api_view()
