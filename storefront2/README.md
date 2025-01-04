@@ -1,4 +1,4 @@
-# Python + Django Part-2
+# Python + Django Part-2 - Project - Shopping Cart
 
 # Building RESTful APIs with  Django REST Framework
 - Introdution
