@@ -1,15 +1,13 @@
-from .models import Collection, OrderItem, Review
-from django.shortcuts import get_object_or_404
 from django.db.models.aggregates import Count
+from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
-from rest_framework.mixins import ListModelMixin, CreateModelMixin, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin
-from rest_framework.generics import ListCreateAPIView
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet
 from rest_framework import status
-from .models import Product
 from .filters import ProductFilter
+from .models import Collection, Product, Review
 from .serializers import CollectionSerializer, ProductSerializer, ReviewSerializer
 
 class ProductViewSet(ModelViewSet):
