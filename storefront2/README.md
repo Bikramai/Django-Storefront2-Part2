@@ -46,3 +46,12 @@
 - Adding a Cart Item
 - Updating a Cart Item
 - Deleting a Cart Item
+
+# Django Authentication System
+- Introduction
+- Django Authentication System
+- Customizing the User Model
+- Extending the User Model
+- Creating user Profiles
+- Grouping and Permissions
+- Creating Custom Permissions
