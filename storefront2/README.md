@@ -34,3 +34,15 @@
 - Searching 
 - Sorting
 - Pagination
+
+# Designing and Implementing a Shopping Cart API
+- Introduction
+- Designing the API
+- Revisiting the Data Model
+- Creating a Cart
+- Getting a Cart
+- Deleting a Cart
+- Getting Cart Items
+- Adding a Cart Item
+- Updating a Cart Item
+- Deleting a Cart Item
