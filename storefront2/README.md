@@ -55,3 +55,19 @@
 - Creating user Profiles
 - Grouping and Permissions
 - Creating Custom Permissions
+
+# Securing APIs
+- Introduction
+- Token-based Authentication
+- Adding the Authentication Endpoints
+- Registering Users
+- Building th eProfile API
+- Logging In
+- Inspecting a JSON Web Token
+- Refreshing Token
+- Getting the Current User
+- Getting the Current User's Profiles
+- Applying Permissions
+- Applying Custom Permissions
+- Applying Model Permissions
+- Applying Custom Model Permissions
