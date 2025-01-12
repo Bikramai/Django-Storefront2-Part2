@@ -71,3 +71,17 @@
 - Applying Custom Permissions
 - Applying Model Permissions
 - Applying Custom Model Permissions
+
+# Designing and Building the Orders API
+- Introduction
+- Designing the API
+- Getting the Orders
+- Applying Permissions
+- Creating an Orders
+- Creating Order Items
+- Returning the Created Order
+- Data Validation
+- Revisiting the Permissions
+- Updating an Order
+- Signals
+- Creating Custom Signals
