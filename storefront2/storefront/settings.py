@@ -152,6 +152,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication', 
     ),
+    
 }
 
 AUTH_USER_MODEL = 'core.User'
@@ -164,6 +165,6 @@ DJOSER = {
 }
 
 SIMPLE_JWT = {
-    'AUTH_HEADER_TYPES': ('JWT',),
+    'AUTH_HEADER_TYPES': ('JWT'),
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1)
 }
