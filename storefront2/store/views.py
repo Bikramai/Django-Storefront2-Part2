@@ -88,7 +88,7 @@ class CartItemViewSet(ModelViewSet):
 class CustomerViewSet(ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
-    permission_classes = [FullDjangoModelPermissions]
+    permission_classes = [DjangoModelPermissionsOrAnonReadOnly]
 
     # def get_permissions(self):
     #     if self.request.method == 'GET':
