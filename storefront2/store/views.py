@@ -91,7 +91,12 @@ class CustomerViewSet(CreateModelMixin,
                       GenericViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
-    # permission_classes = [IsAdminUser]
+    permission_classes = [IsAuthenticated]
+
+    def get_permissions(self):
+        if self.request.method == 'GET':
+            return [AllowAny()]
+        return [IsAuthenticated()]
 
 
 # class CustomerViewSet(ModelViewSet):
@@ -105,7 +110,7 @@ class CustomerViewSet(CreateModelMixin,
     #     serializer = CustomerSerializer(customer)
     #     return Response(serializer.data)
 
-    @action(detail=False, methods=['GET', 'PUT'], permission_classes=[IsAuthenticated])
+    @action(detail=False, methods=['GET', 'PUT'])
     def me(self, request):
         (customer, created) = Customer.objects.get_or_create(
             user_id=request.user.id)
