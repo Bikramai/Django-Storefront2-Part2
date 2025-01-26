@@ -90,6 +90,10 @@ class CustomerViewSet(ModelViewSet):
     serializer_class = CustomerSerializer
     permission_classes = [IsAdminUser]
 
+    @action(detail=True, permission_classes=[ViewCustomerHistoryPermission])
+    def history(self, request, pk):
+        return Response('OK')
+
     # def get_permissions(self):
     #     if self.request.method == 'GET':
     #         return [AllowAny()]
